@@ -1,0 +1,39 @@
+﻿<div class="container" ng-controller="employee-controller">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Employee Details - Grid CRUD operations
+        </div>
+        <table class="table table-bordered">
+            <thead style="background-color:lightblue;">
+                <tr>
+                    <th> Employee ID</th>
+                    <th> Employee Name</th>
+                    <th>Email </th>
+                    <th>Department Name</th>
+                    <th>Designation</th>
+                    <th> Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in Employees">
+                    <td> {{emp.EmpID}}</td>
+                    <td> {{emp.EmpName}} </td>
+                    <td>{{emp.Email}}</td>
+                    <td>{{emp.DeptName}}</td>
+                    <td>{{emp.Designation}}</td>
+                    <td style="width:200px;">
+                        <a href="#" class="btn btn-info">Update</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/AngularJSApp/Employee/Module.js"></script>   
+    <script src="~/AngularJSApp/Employee/Service.js"></script>
+    <script src="~/AngularJSApp/Employee/Controller.js"></script>
+
+}
